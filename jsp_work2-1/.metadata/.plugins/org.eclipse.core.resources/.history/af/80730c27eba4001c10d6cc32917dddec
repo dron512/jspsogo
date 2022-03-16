@@ -1,0 +1,14 @@
+package bbb;
+
+public class AA {
+
+	public void doA() {
+		
+	}
+	public void doB() {
+		
+	}
+	public void doC() {
+		
+	}
+}

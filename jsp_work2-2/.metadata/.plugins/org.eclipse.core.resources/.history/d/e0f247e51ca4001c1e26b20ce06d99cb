@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//document.getElementById("asdf");
+</script>
+</head>
+<body>
+<div>
+	<form action="b.jsp">
+		아이디<input type="text" name="id">
+		비번<input type="text" name="pw">
+		<input type="submit" value="전송">
+	</form>
+</div>
+<div>
+	두개의 넣기 +, -
+	<form action="calcu.jsp">
+		숫자 : <input type="text" name="num1"><br>
+		숫자 : <input type="text" name="num2"><br>
+		<input type="submit" value="전송">
+	</form>
+</div>
+</body>
+</html>

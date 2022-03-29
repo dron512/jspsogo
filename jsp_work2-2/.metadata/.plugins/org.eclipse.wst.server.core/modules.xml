@@ -2,5 +2,6 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:ex0322" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:ex0308" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:ex0329" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:ex0315" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

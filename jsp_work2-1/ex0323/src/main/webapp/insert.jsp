@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="insertproc.jsp">
+<form action="insertproc.jsp" method="post">
 	username<br>
 	<input type="text" name="username" placeholder="Username"/><br>
 	password<br>

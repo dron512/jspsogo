@@ -1,10 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex0405.MemberDBManager"%>
 <%
 	String u = request.getParameter("username");
 	String p = request.getParameter("password");
 	
+	MemberDBManager mdm = new MemberDBManager();
+	mdm.doInsert(u, p);
 	
+	out.println("insert 했음");
 	
-
+	response.sendRedirect("select.jsp");
 %>

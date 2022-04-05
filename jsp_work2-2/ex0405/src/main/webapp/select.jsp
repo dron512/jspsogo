@@ -1,37 +1,35 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex0405.MemberDBManager" %>
+<%@ page import="ex0405.Member" %>
+<%@ page import="java.util.List" %>
+<%
+	MemberDBManager mdm = new MemberDBManager();
+	List<Member> list = mdm.doselect();
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans:400" rel="stylesheet">
-<style>
-	*{
-		font-family: 'Black Han Sans', sans-serif;
-	}
-	.container{
-		margin: 0 auto;
-		width:700px;
-		background-color: #ccc;
-	}
-	ul{
-		list-style: none;
-	}
-	li{
-		display : inline;
-	}
-	a{
-		background-color: lime;
-		display : inline-block;
-		margin : 1rem;
-		padding : 1rem;
-		text-decoration: none;
-	}
-</style>
+<link href="./mystyle.css" rel="stylesheet">
 </head>
 <body>
 <%@ include file="nav.jsp" %>
-<h1>select페이지</h1>
+<div class="main">
+	<h1>select페이지</h1>
+	<table class="table">
+		<tr>
+			<th>ID</th><th>USERNAME</th><th>PASSWORD</th>
+		</tr>
+		<% for (Member member : list){ %>
+		<tr>
+			<td><%=member.getId() %></td>
+			<td><%out.println(member.getUsername()); %></td>
+			<td><%=member.getPassword() %></td>
+		</tr>
+		<% }%>
+	</table>
+</div>
 </body>
 </html>

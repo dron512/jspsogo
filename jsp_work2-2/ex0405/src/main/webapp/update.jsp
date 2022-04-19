@@ -20,6 +20,7 @@
 <div class="main">
 	<h1>update페이지</h1>
 	<form action="updateproc.jsp">
+		<input type="hidden" name="id" value="<%=id%>" />
 		username<br>
 		<input type="text" name="username" value="<%=member.getUsername()%>" /><br>
 		password<br>

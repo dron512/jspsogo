@@ -9,22 +9,31 @@
 	margin: 0 auto;
 	width: 700px;
 	background-color: #ccc;
+	position: relative;
 }
-.container div{
-	padding: 0.3rem 1rem;
-}
-
 .main {
 	margin: 0 auto;
 	width: 700px;
 	background-color: #eee;
 	padding: 1.5rem;
 }
-
-ul {
+.container ul {
+	width : 410px;
 	list-style: none;
+/* 	background-color: red; */
 }
-
+.container div{
+	margin-top: 14px;
+	position : absolute;
+	right : 0;
+	top : 0;
+	width : 290px;
+/* 	background-color: green; */
+}
+/* 로그인창 세로로 크게....*/
+.container div input[type="button"]{
+	height: 50px;
+}
 li {
 	display: inline;
 }

@@ -106,6 +106,30 @@ public class MemberDBManager {
 		}
 		return member;
 	}
+
+	public void doupdate(String username,
+						String password,
+						String id) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		try {
+			Class.forName(classname);
+			con = DriverManager.getConnection(
+					url,
+					MemberDBManager.user,
+					MemberDBManager.password);
+			pstmt = con.prepareStatement("update member "
+					+ "set username =? "
+					+ ", password = ? "
+					+ "where id = ?");
+			pstmt.setString(1, username);
+			pstmt.setString(2, password);
+			pstmt.setInt(3, Integer.parseInt(id));
+			pstmt.executeUpdate();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
 
 

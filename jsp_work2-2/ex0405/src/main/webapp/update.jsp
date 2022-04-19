@@ -3,9 +3,9 @@
 <%@ page import="ex0405.MemberDBManager" %>
 <%@ page import="ex0405.Member" %>
 <%
-	String id = request.getParameter("id");
+	String id = request.getParameter("id");	// 주소줄에 있는 24,25
 	MemberDBManager mdm = new MemberDBManager();
-	Member member = mdm.doselectone();
+	Member member = mdm.doselectone(id);
 %>
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@
 		<input type="text" name="username" value="<%=member.getUsername()%>" /><br>
 		password<br>
 		<input type="text" name="password" value="<%=member.getPassword()%>" /><br>
-		<input type="submit" value="저장"/>
+		<input type="submit" value="수정"/>
 	</form>
 </div>
 </body>

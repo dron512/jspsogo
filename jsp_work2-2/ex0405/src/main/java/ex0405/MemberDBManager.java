@@ -57,7 +57,6 @@ public class MemberDBManager {
 			e.printStackTrace();
 		}
 	}
-
 	public String dodelete(String ids[]) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -81,8 +80,31 @@ public class MemberDBManager {
 		}
 	}
 	
-	public Member doselectone() {
-		return new Member();
+	// 하나의 행을 가지고 오기
+	// select * from member where id =24;
+	public Member doselectone(String id) {
+		Member member = new Member();
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			Class.forName(classname);
+			con = DriverManager.getConnection(url,user,password);
+			pstmt = con.prepareStatement("select * from member "
+										   + "where id = ?");
+			pstmt.setInt(1, Integer.parseInt(id));
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				member.setId(rs.getInt("id"));
+				member.setUsername(rs.getString("username"));
+				member.setPassword(rs.getString("password"));
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return member;
 	}
 }
 

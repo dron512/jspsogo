@@ -15,6 +15,15 @@ public class MemberDBManager {
 	private static String user = "root";
 	private static String password = "1234";
 	
+	public Connection getConnection() throws Exception{
+		Class.forName(classname);
+		Connection con = DriverManager.getConnection(
+				url,
+				MemberDBManager.user,
+				MemberDBManager.password);
+		return con;
+	}
+	
 	public List<Member> doselect(){
 		ArrayList<Member> al = new ArrayList();
 		Connection con;
@@ -129,6 +138,27 @@ public class MemberDBManager {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public boolean loginchk(String username,String password) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			con = getConnection();
+			pstmt = con.prepareStatement("select * from member"
+					+ " where username =? and password = ?");
+			pstmt.setString(1, username);
+			pstmt.setString(2, password);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				System.out.println("데이터베이스에 있음...");
+				return true;
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 }
 

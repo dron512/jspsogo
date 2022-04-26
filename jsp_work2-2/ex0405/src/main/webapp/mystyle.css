@@ -24,7 +24,7 @@
 /* 	background-color: red; */
 }
 .container div{
-	margin-top: 14px;
+	margin-top: 0.5rem;
 	margin-right:30px;
 	position : absolute;
 	right : 0;
@@ -33,9 +33,11 @@
 /* 	background-color: green; */
 }
 /* 로그인창 세로로 크게....*/
-.container div input[type="button"]{
+.container div input[type="submit"]{
 	height: 50px;
+	background-color: #eee;
 }
+
 li {
 	display: inline;
 }

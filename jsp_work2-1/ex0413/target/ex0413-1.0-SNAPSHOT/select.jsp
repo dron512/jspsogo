@@ -27,7 +27,7 @@
     <tr>
         <td> <input type="checkbox" name="id" value="<%=member.getId()%>" /> </td>
         <td> <%=member.getId()%> </td>
-        <td> <%=member.getUsername()%> </td>
+        <td><a href="update.jsp?id=<%=member.getId()%>"><%=member.getUsername()%></a></td>
         <td> <%=member.getPassword()%> </td>
         <td> <%=member.getGender()%> </td>
     </tr>

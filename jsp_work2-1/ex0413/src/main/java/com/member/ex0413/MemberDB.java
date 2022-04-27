@@ -8,15 +8,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MemberDB {
+
+    public Connection getConnection() throws Exception{
+        Class.forName("com.mysql.cj.jdbc.Driver");  // mysql.jar 라이브러리 확인
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/b-21",
+                "root","1234");
+        return con;
+    }
+
     public List<Member> doselect(){
         List<Member> list = new ArrayList();
         Connection con = null;  // DB연결
         PreparedStatement pstmt = null; // SQL문 작성..
         ResultSet rs = null;  // DB Table 저장..
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");  // mysql.jar 라이브러리 확인
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/b-21",
-                                            "root","1234");
+            con = getConnection();
             pstmt = con.prepareStatement("select * from member");
             rs = pstmt.executeQuery();
             while (rs.next()){
@@ -48,15 +54,46 @@ public class MemberDB {
         // 2,3,4,
         System.out.println("values = "+values);
         try{
-            // jar 로딩..
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            // DB 연결
-            con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/b-21",
-                    "root","1234");
+            con = getConnection();
             // sql 구문 준비
             pstmt = con.prepareStatement("delete from member where id in ("+values+")");
             pstmt.executeUpdate();// sql 구문 실행...
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void doinsert(String username,String password,String gender){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try{
+            con = getConnection();
+            pstmt = con.prepareStatement("insert into member" +
+                                            "(username,password,gender) " +
+                                              "values (?,?,?)");
+            pstmt.setString(1,username);
+            pstmt.setString(2,password);
+            pstmt.setString(3,gender);
+            pstmt.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void doupdate(String username,String password,String gender,String id){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try{
+            con = getConnection();
+            pstmt = con.prepareStatement("update member set username=?, " +
+                                                               "password=?, " +
+                                                               "gender = ? " +
+                                            " where id = ?");
+            pstmt.setString(1,username);
+            pstmt.setString(2,password);
+            pstmt.setString(3,gender);
+            pstmt.setInt(4,Integer.parseInt(id));
+            pstmt.executeUpdate();
         }catch (Exception e){
             e.printStackTrace();
         }

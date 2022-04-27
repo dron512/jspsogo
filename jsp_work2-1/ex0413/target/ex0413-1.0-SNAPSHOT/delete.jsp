@@ -11,4 +11,6 @@
   md.dodelete(ids);
 
   response.sendRedirect("select.jsp");
+
+  // insert update 만들어야함...
 %>

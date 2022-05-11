@@ -98,4 +98,25 @@ public class MemberDB {
             e.printStackTrace();
         }
     }
+
+    public boolean dologinchk(String u,String p){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try{
+            con = getConnection();
+            pstmt = con.prepareStatement("select * from member where username = ? and password =?");
+            pstmt.setString(1, u);
+            pstmt.setString(2, p);
+            rs = pstmt.executeQuery();
+            if(rs.next()){
+                System.out.println("행있음");
+                return true;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

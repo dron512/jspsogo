@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="/index.jsp">MYSITE</a>

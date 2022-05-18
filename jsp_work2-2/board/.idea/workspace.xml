@@ -10,18 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e538af1b-22a0-4b29-923f-a553eb9c3d94" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mh/board/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mh/board/BoardManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mh/board/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/board_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/board_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/head.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/nav.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/jsp_work/jsp_work2-2/board",
+    "last_opened_file_path": "D:/jsp_work/jsp_work2-1/ex0413",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -169,7 +158,8 @@
       <updated>1652158164708</updated>
       <workItem from="1652158167395" duration="7853000" />
       <workItem from="1652242964078" duration="211000" />
-      <workItem from="1652761756052" duration="6966000" />
+      <workItem from="1652761756052" duration="7444000" />
+      <workItem from="1652847775399" duration="48000" />
     </task>
     <servers />
   </component>

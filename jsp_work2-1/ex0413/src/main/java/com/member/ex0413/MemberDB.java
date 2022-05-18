@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MemberDB {
-
     public Connection getConnection() throws Exception{
         Class.forName("com.mysql.cj.jdbc.Driver");  // mysql.jar 라이브러리 확인
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/b-21",

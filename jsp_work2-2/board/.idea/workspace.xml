@@ -11,6 +11,24 @@
   <component name="ChangeListManager">
     <list default="true" id="e538af1b-22a0-4b29-923f-a553eb9c3d94" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mh/board/BoardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mh/board/BoardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.settings/.jsdtscope" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.settings/org.eclipse.wst.common.component" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.settings/org.eclipse.wst.jsdt.ui.superType.container" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/.settings/org.eclipse.wst.jsdt.ui.superType.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/src/main/webapp/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freeboard/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +71,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/jsp_work/jsp_work2-1/ex0413",
+    "last_opened_file_path": "D:/jsp_work/jsp_work2-1/board",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -160,6 +178,7 @@
       <workItem from="1652242964078" duration="211000" />
       <workItem from="1652761756052" duration="7444000" />
       <workItem from="1652847775399" duration="48000" />
+      <workItem from="1653365728473" duration="7252000" />
     </task>
     <servers />
   </component>

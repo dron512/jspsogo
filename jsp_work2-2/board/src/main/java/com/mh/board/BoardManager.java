@@ -8,7 +8,8 @@ import java.util.List;
 
 public class BoardManager {
 
-    public List<Board> doselect() throws Exception {
+    public List<Board> doselect(int pagenum) throws Exception {
+        int start = ( pagenum -1 )* 5;
         List<Board> list = new ArrayList<>();
 
         Connection con = null;
@@ -16,7 +17,9 @@ public class BoardManager {
         ResultSet rs = null;
         try{
             con = DBManager.connect();
-            pstmt = con.prepareStatement("select * from board");
+            pstmt = con.prepareStatement(
+                    "select * from board order by idx desc limit "+start+",5"
+            );
             rs = pstmt.executeQuery();
             while(rs.next()){
                 Board board = new Board();
@@ -34,11 +37,28 @@ public class BoardManager {
             DBManager.close(con,pstmt,rs);
         }
 
-        Board board = new Board();
-        board.setIdx(0);
-        board.setName("name");
-
-        list.add(board);
         return list;
+    }
+    // 총 페이지 개수 가져오기
+    public int getPageCnt() throws Exception {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try{
+            con = DBManager.connect();
+            pstmt = con.prepareStatement("select " +
+                                            "ceil(count(idx)/5) as cnt " +
+                                            "from board");
+            rs = pstmt.executeQuery();
+            if(rs.next())
+                return rs.getInt("cnt");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            DBManager.close(con,pstmt,rs);
+        }
+        return 1;
     }
 }

@@ -3,10 +3,13 @@
 <%@ page import="com.mh.board.Board" %>
 <%@ page import="java.util.List" %>
 <%
-    BoardManager bm = new BoardManager();
-    List<Board> list = bm.doselect();
+    String pagenum = request.getParameter("pagenum");
+    if(pagenum == null) pagenum = "1";
 
-//    out.println(list);
+    BoardManager bm = new BoardManager();
+    List<Board> list = bm.doselect( Integer.parseInt(pagenum) );
+    int pagecnt = bm.getPageCnt();
+//    out.println("pagecnt = "+pagecnt);
 %>
 <html>
 <head>
@@ -39,6 +42,29 @@
         <% } %>
         </tbody>
     </table>
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <% if( Integer.parseInt(pagenum) == 1) {%>
+                <li class="page-item disabled">
+            <% } else {%>
+                <li class="page-item">
+            <% } %>
+                <a class="page-link"
+                   href="?pagenum=<%=Integer.parseInt(pagenum)-1%>">Previous
+                </a>
+            </li>
+            <% for(int i=1;i<pagecnt+1; i++) {%>
+                <li class="page-item <%=(Integer.parseInt(pagenum)==i)?"active":""%>">
+                    <a class="page-link" href="?pagenum=<%=i%>"><%=i%></a>
+                </li>
+            <% } %>
+            <li class="page-item <%=(Integer.parseInt(pagenum)==pagecnt)?"disabled":""%>">
+                <a class="page-link
+                   href="?pagenum=<%=Integer.parseInt(pagenum)+1%>">Next
+                </a>
+            </li>
+        </ul>
+    </nav>
 </div>
 </body>
 </html>

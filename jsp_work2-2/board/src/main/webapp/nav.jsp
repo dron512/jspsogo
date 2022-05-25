@@ -17,10 +17,11 @@
                     <a class="nav-link" href="javascript:void(0)">TODO</a>
                 </li>
             </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn btn-info" type="button">Search</button>
+            </form>
         </div>
-        <form class="d-flex">
-            <input class="form-control me-2" type="text" placeholder="Search">
-            <button class="btn btn-info" type="button">Search</button>
-        </form>
+
     </div>
 </nav>

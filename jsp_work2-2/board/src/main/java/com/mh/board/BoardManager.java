@@ -3,6 +3,7 @@ package com.mh.board;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,5 +61,26 @@ public class BoardManager {
             DBManager.close(con,pstmt,rs);
         }
         return 1;
+    }
+
+    public void doinsert(Board board) throws Exception{
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try{
+            con = DBManager.connect();
+            pstmt = con.prepareStatement("insert into board " +
+                                             "(title,content,name,wdate) "+
+                                             " values " +
+                                             "(?,?,?,?)");
+            pstmt.setString(1, board.getTitle());
+            pstmt.setString(2, board.getContent());
+            pstmt.setString(3, board.getName());
+            pstmt.setString(4, LocalDateTime.now().toString());
+            pstmt.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            DBManager.close(con,pstmt);
+        }
     }
 }

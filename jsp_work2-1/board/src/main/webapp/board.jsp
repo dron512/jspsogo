@@ -1,4 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ page import="com.dg.board.Board"%>
+<%@ page import="com.dg.board.BoardManager"%>
+<%@ page import="java.util.List" %>
+
+<%
+    BoardManager bm = new BoardManager();
+    List<Board> list = bm.doselect();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,12 +32,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
+                <% for(int i =0; i<list.size(); i++) {
+                    Board board = list.get(i);
+                %>
+                    <tr>
+                       <th scope="row"><%=board.getIdx()%></th>
+                        <td><%=board.getTitle()%></td>
+                        <td><%=board.getName()%></td>
+                        <td><%=board.getWdate()%></td>
+                        <td><%=board.getCount()%></td>
+                    </tr>
+                <% } %>
                 </tbody>
             </table>
         </div>

@@ -9,8 +9,8 @@
     BoardManager bm = new BoardManager();
     List<Board> list = bm.doselect( Integer.parseInt(pagenum) );
     int pagecnt = bm.getPageCnt();
-//    out.println("pagecnt = "+pagecnt);
 %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Title</title>
@@ -42,6 +42,7 @@
         <% } %>
         </tbody>
     </table>
+    <a class="btn btn-primary" href="insert.jsp">글쓰기</a>
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             <% if( Integer.parseInt(pagenum) == 1) {%>
@@ -59,8 +60,9 @@
                 </li>
             <% } %>
             <li class="page-item <%=(Integer.parseInt(pagenum)==pagecnt)?"disabled":""%>">
-                <a class="page-link
-                   href="?pagenum=<%=Integer.parseInt(pagenum)+1%>">Next
+                <a class="page-link"
+                   href="?pagenum=<%=Integer.parseInt(pagenum)+1%>">
+                   Next
                 </a>
             </li>
         </ul>

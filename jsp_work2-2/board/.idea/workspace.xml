@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e538af1b-22a0-4b29-923f-a553eb9c3d94" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/deleteproc.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mh/board/BoardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mh/board/BoardManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="e538af1b-22a0-4b29-923f-a553eb9c3d94" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/jsp_work/jsp_work2-2/board/src/main/webapp",
+    "last_opened_file_path": "D:/jsp_work/jsp_work2-1/board",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -171,6 +164,7 @@
       <workItem from="1653365728473" duration="7252000" />
       <workItem from="1653970978631" duration="6929000" />
       <workItem from="1654576159578" duration="5875000" />
+      <workItem from="1654662429385" duration="73000" />
     </task>
     <servers />
   </component>

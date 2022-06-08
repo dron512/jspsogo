@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,5 +48,25 @@ public class BoardManager {
 
         }
         return list;
+    }
+
+    public boolean doinsert(Board board){
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try{
+            con = connect();
+            pstmt = con.prepareStatement("insert into board " +
+                                            "(name,title,content,wdate)" +
+                                            " values " +
+                                            "(?,?,?,?)");
+            pstmt.setString(1, board.getName());
+            pstmt.setString(2, board.getTitle());
+            pstmt.setString(3, board.getContent());
+            pstmt.setString(4, LocalDateTime.now().toString());
+            pstmt.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return true;
     }
 }

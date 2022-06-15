@@ -37,7 +37,7 @@
                 %>
                     <tr>
                        <th scope="row"><%=board.getIdx()%></th>
-                        <td><%=board.getTitle()%></td>
+                        <td><a href="view.jsp?idx=<%=board.getIdx()%>"><%=board.getTitle()%></a></td>
                         <td><%=board.getName()%></td>
                         <td><%=board.getWdate()%></td>
                         <td><%=board.getCount()%></td>

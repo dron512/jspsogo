@@ -19,6 +19,7 @@
         out.println("alert('글저장하였습니다.');");
         out.println("window.location.href='board.jsp';");
         out.println("</script>");
+
     }
 %>
 
